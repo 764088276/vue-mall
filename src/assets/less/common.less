@@ -1,0 +1,50 @@
+
+/*flex的常用方法定义*/
+#flexStyle(@justify:flex-start,@align:flex-start){
+  display: flex;
+  justify-content: @justify;
+  align-items:@align;
+}
+
+//单行溢出省略号
+#overEllipsis{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+//多行溢出省略号
+#overLinesEllipsis(@line:2){
+  overflow:hidden;
+  display: -webkit-box;
+  -webkit-line-clamp:@line;
+  -webkit-box-orient:vertical;
+}
+
+//定位部分的样式
+#positionStyle(@position:static,@left:0,@top:0){
+  position:@position;
+  top:@top;
+  left:@left;
+}
+
+//字体的定义
+@smallFont:22px;
+@middleFont:28px;
+@largeFont:32px;
+
+//定义颜色
+@grayColor:#aeabac;
+@middleGray:#f8f8f6;
+@lightGrayColor:#f0f0f0;
+@bgColor:#fafafa;
+
+//换肤颜色
+@defaultColor:#00c800;
+@oryeColor:#ff9400;
+@yeblColor:#fcc600;
+@blueColor:#4a90e2;
+@redColor:#ff2340;
+
+//顶部tabbar的高度
+@tabbarHeight:102px;

@@ -1,0 +1,123 @@
+@import 'common.less';
+*{
+  margin:0;
+  padding:0;
+}
+body,html{
+  width:100%;
+  height:100%;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  background: #fafafa;
+  color:#333;
+  font-family: '微软雅黑','arial';
+  font-size:@middleFont;
+}
+ul{
+  list-style: none;
+}
+input,textarea{
+  border:0 none;
+  outline:0 none;
+  font-size:@middleFont;
+  color:#999;
+  font-family: '微软雅黑','arial';
+}
+button{
+  outline:0 none;
+}
+#app{
+  width:100%;
+  max-width:750px;
+  height: 100%;
+  margin:0 auto;
+}
+.with-mock-search{
+  padding-top:106px;
+}
+.with-tabbar{
+  padding-bottom:102px;
+}
+.with-pagetitle{
+  padding-top:80px;
+}
+.outer-layer{
+  width:100%;
+  height:100%;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  #flexStyle(center,center);
+  #positionStyle(fixed,0,0);
+  z-index:1000;
+
+  .layer-bg{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.4);
+    z-index:10;
+  }
+  .layer-container{
+    background: #fff;
+    position:relative;
+    z-index:100;
+    overflow: hidden;
+  }
+}
+.page-container{
+  width:100%;
+  height: 100%;
+  position:fixed;
+  top:0;
+  left:0;
+
+  z-index:100;
+  background: #fff;
+  box-sizing:border-box;
+  overflow:auto;
+
+  .page-content{
+    width:100%;
+    height:100%;
+    overflow: auto;
+  }
+}
+//底部大按钮的样式
+.bottom-whole-btn{
+  width:100%;
+  #flexStyle(center,center);
+  background: #fff;
+  padding:20px 32px;
+  box-sizing:border-box;
+
+  .btn{
+    width:100%;
+    background: @defaultColor;
+    color:#fff;
+    line-height: 76px;
+    font-size: 32px;
+    border-radius:40px;
+    border:0 none;
+    text-align: center;
+  }
+}
+.with-bottom-btn{
+  padding-bottom:116px;
+}
+.slide-enter-active, .slide-leave-active {
+  transition: all 0.5s;
+  left:0;
+}
+
+.slide-enter, .slide-leave-to {
+  left:100%;
+
+  //opacity: 0;
+}
+
+
+
